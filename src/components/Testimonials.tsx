@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 
 const testimonials = [
@@ -132,40 +131,34 @@ const Testimonials = () => {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="w-full flex-shrink-0 px-4 md:px-8 flex items-center gap-6"
+                  className="w-full flex-shrink-0 px-4 md:px-8 flex flex-col"
                   style={{ minHeight: 210 }}
                 >
-                  {/* Texto do depoimento - 58% */}
-                  <div
-                    className="flex flex-col justify-center"
-                    style={{ flexBasis: "58%", flexGrow: 0, flexShrink: 0 }}
-                  >
-                    <p className="text-yhwh-brown-medium italic text-left mb-6">
+                  <div className="w-full mb-6">
+                    <p className="text-yhwh-brown-medium italic text-left">
                       "{testimonial.testimonial}"
                     </p>
-                    <div className="flex flex-col items-start">
+                  </div>
+                  
+                  <div className="flex items-center gap-4">
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-yhwh-brown-light"
+                    />
+                    
+                    <div>
                       <h4 className="font-playfair font-bold text-yhwh-brown-dark text-lg">
                         {testimonial.name}
                       </h4>
                       <p className="text-yhwh-brown-medium text-sm mb-2">
                         {testimonial.position}
                       </p>
-                      <div className="flex space-x-1">{renderStars(testimonial.stars)}</div>
+                      <div className="flex space-x-1">
+                        {renderStars(testimonial.stars)}
+                      </div>
                     </div>
                   </div>
-                  {/* Imagem do cliente - 30% */}
-                  <div
-                    className="flex flex-col items-center justify-center"
-                    style={{ flexBasis: "30%", flexGrow: 0, flexShrink: 0 }}
-                  >
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover border-2 border-yhwh-brown-light mb-2"
-                    />
-                  </div>
-                  {/* Espaço restante para manter layout centralizado (opcional/complemento) */}
-                  <div style={{ flexBasis: "12%" }} />
                 </div>
               ))}
             </div>
