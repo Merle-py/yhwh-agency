@@ -1,0 +1,55 @@
+
+import { useEffect, useState } from "react";
+
+const Loader = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading for a minimum time to avoid flashing
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div
+      className={`fixed inset-0 bg-yhwh-white z-[100] flex items-center justify-center transition-opacity duration-500 ${
+        isLoading ? "opacity-100" : "opacity-0 pointer-events-none"
+      }`}
+    >
+      <div className="relative">
+        <h1 className="text-4xl font-bold font-playfair text-yhwh-brown-dark">
+          YHWH <span className="font-normal italic">Agency</span>
+        </h1>
+        <div className="mt-4 h-1 w-48 bg-yhwh-brown-light/20 overflow-hidden rounded-full">
+          <div
+            className="h-full bg-yhwh-brown-light origin-left"
+            style={{
+              animation: "loading 1.5s ease-in-out infinite",
+            }}
+          ></div>
+        </div>
+        <style>
+          {`
+            @keyframes loading {
+              0% {
+                width: 0%;
+              }
+              50% {
+                width: 100%;
+              }
+              100% {
+                width: 0%;
+                transform: translateX(100%);
+              }
+            }
+          `}
+        </style>
+      </div>
+    </div>
+  );
+};
+
+export default Loader;

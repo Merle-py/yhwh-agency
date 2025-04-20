@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'playfair': ['"Playfair Display"', 'serif'],
+				'inter': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,6 +65,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				yhwh: {
+					white: '#ffffff',
+					black: '#000000',
+					brown: {
+						dark: '#3a2723',
+						light: '#bda791',
+						lightest: '#d6c5b3',
+						medium: '#8c6e5a',
+						soft: '#efe4d9'
+					}
 				}
 			},
 			borderRadius: {
