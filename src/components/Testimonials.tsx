@@ -8,7 +8,8 @@ const testimonials = [
     testimonial:
       "Trabalhar com a YHWH Agency transformou completamente nossa presença digital. A estratégia personalizada e o branding sofisticado nos posicionaram como referência no mercado. Resultados muito além do esperado.",
     stars: 5,
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150",
   },
   {
     name: "Rodrigo Almeida",
@@ -16,7 +17,8 @@ const testimonials = [
     testimonial:
       "Impressionado com a qualidade e precisão das campanhas. A equipe da YHWH Agency compreendeu perfeitamente o DNA da nossa marca e isso se refletiu nos excelentes resultados obtidos com o tráfego pago.",
     stars: 5,
-    image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=150&h=150",
+    image:
+      "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=150&h=150",
   },
   {
     name: "Amanda Soares",
@@ -24,7 +26,8 @@ const testimonials = [
     testimonial:
       "O rebranding realizado pela YHWH Agency revolucionou nossa comunicação. A atenção aos detalhes, o design sofisticado e a estratégia integrada criaram uma imagem que realmente representa nossos valores.",
     stars: 5,
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150&h=150",
+    image:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150&h=150",
   },
 ];
 
@@ -129,27 +132,40 @@ const Testimonials = () => {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="w-full flex-shrink-0 px-4 md:px-8"
+                  className="w-full flex-shrink-0 px-4 md:px-8 flex items-center gap-6"
+                  style={{ minHeight: 210 }}
                 >
-                  <p className="text-yhwh-brown-medium italic text-center mb-8">
-                    "{testimonial.testimonial}"
-                  </p>
-                  <div className="flex flex-col items-center">
+                  {/* Texto do depoimento - 58% */}
+                  <div
+                    className="flex flex-col justify-center"
+                    style={{ flexBasis: "58%", flexGrow: 0, flexShrink: 0 }}
+                  >
+                    <p className="text-yhwh-brown-medium italic text-left mb-6">
+                      "{testimonial.testimonial}"
+                    </p>
+                    <div className="flex flex-col items-start">
+                      <h4 className="font-playfair font-bold text-yhwh-brown-dark text-lg">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-yhwh-brown-medium text-sm mb-2">
+                        {testimonial.position}
+                      </p>
+                      <div className="flex space-x-1">{renderStars(testimonial.stars)}</div>
+                    </div>
+                  </div>
+                  {/* Imagem do cliente - 30% */}
+                  <div
+                    className="flex flex-col items-center justify-center"
+                    style={{ flexBasis: "30%", flexGrow: 0, flexShrink: 0 }}
+                  >
                     <img
                       src={testimonial.image}
                       alt={testimonial.name}
-                      className="w-16 h-16 rounded-full object-cover border-2 border-yhwh-brown-light mb-4"
+                      className="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover border-2 border-yhwh-brown-light mb-2"
                     />
-                    <h4 className="font-playfair font-bold text-yhwh-brown-dark text-lg">
-                      {testimonial.name}
-                    </h4>
-                    <p className="text-yhwh-brown-medium text-sm mb-3">
-                      {testimonial.position}
-                    </p>
-                    <div className="flex space-x-1">
-                      {renderStars(testimonial.stars)}
-                    </div>
                   </div>
+                  {/* Espaço restante para manter layout centralizado (opcional/complemento) */}
+                  <div style={{ flexBasis: "12%" }} />
                 </div>
               ))}
             </div>
