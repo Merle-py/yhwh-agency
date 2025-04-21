@@ -21,14 +21,11 @@ const Loader = () => {
     >
       <div className="relative flex flex-col items-center">
         <img
-          src="/lovable-uploads/e39ca635-cba2-47d7-b864-8ae2416e17c8.png"
+          src="/lovable-uploads/582bd334-7ea1-4e15-b5b1-1d3400c2a3c4.png"
           alt="YHWH Agency"
-          className="h-16 w-auto mb-4"
-          style={{ maxHeight: 64 }}
+          className="h-36 w-auto mb-2"
+          style={{ maxHeight: 144 }}
         />
-        <h1 className="text-4xl font-bold font-playfair text-yhwh-brown-dark">
-          YHWH <span className="font-normal italic">Agency</span>
-        </h1>
         <div className="mt-4 h-1 w-48 bg-yhwh-brown-light/20 overflow-hidden rounded-full">
           <div
             className="h-full bg-yhwh-brown-light origin-left"

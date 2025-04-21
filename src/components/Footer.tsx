@@ -1,4 +1,3 @@
-
 const Footer = () => {
   return (
     <footer className="bg-yhwh-brown-dark text-white pt-16 pb-8">
@@ -7,14 +6,11 @@ const Footer = () => {
           <div>
             <h2 className="text-2xl font-playfair font-bold mb-6">
               <img
-                src="/lovable-uploads/e39ca635-cba2-47d7-b864-8ae2416e17c8.png"
+                src="/lovable-uploads/582bd334-7ea1-4e15-b5b1-1d3400c2a3c4.png"
                 alt="YHWH Agency"
-                className="h-10 w-auto"
-                style={{ maxHeight: 40 }}
+                className="h-14 w-auto"
+                style={{ maxHeight: 56 }}
               />
-              {/* Se quiser o texto do lado do logo, adicione abaixo:
-              <span className="font-normal italic ml-2">Agency</span>
-              */}
             </h2>
             <p className="text-yhwh-white/70 mb-6 leading-relaxed">
               Transformamos marcas em referências digitais através de estratégias personalizadas e soluções premium de marketing.
@@ -168,7 +164,6 @@ const Footer = () => {
               Contato
             </h3>
             <ul className="space-y-5">
-              {/* Removed address item */}
               <li className="flex items-center">
                 <svg
                   className="w-5 h-5 mr-3 text-yhwh-brown-light"
