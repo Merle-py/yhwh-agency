@@ -35,12 +35,12 @@ const Hero = () => {
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-yhwh-brown-soft"
       style={{
-        backgroundImage: "linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.7)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80')",
+        backgroundImage: "linear-gradient(to right, rgba(255,255,255,0.95), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-yhwh-white/90 to-yhwh-white/70 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-yhwh-white/95 to-yhwh-white/90 z-0"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center my-16 pt-20">
         <h2 className="animate-element opacity-0 animate-fade-in text-5xl md:text-6xl lg:text-7xl font-playfair font-bold text-yhwh-brown-dark leading-tight mb-6">
@@ -101,3 +101,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
