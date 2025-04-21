@@ -6,7 +6,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
             <h2 className="text-2xl font-playfair font-bold mb-6">
-              YHWH <span className="font-normal italic">Agency</span>
+              <img
+                src="/lovable-uploads/e39ca635-cba2-47d7-b864-8ae2416e17c8.png"
+                alt="YHWH Agency"
+                className="h-10 w-auto"
+                style={{ maxHeight: 40 }}
+              />
+              {/* Se quiser o texto do lado do logo, adicione abaixo:
+              <span className="font-normal italic ml-2">Agency</span>
+              */}
             </h2>
             <p className="text-yhwh-white/70 mb-6 leading-relaxed">
               Transformamos marcas em referências digitais através de estratégias personalizadas e soluções premium de marketing.
@@ -210,4 +218,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

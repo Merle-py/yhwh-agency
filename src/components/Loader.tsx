@@ -19,7 +19,13 @@ const Loader = () => {
         isLoading ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
-      <div className="relative">
+      <div className="relative flex flex-col items-center">
+        <img
+          src="/lovable-uploads/e39ca635-cba2-47d7-b864-8ae2416e17c8.png"
+          alt="YHWH Agency"
+          className="h-16 w-auto mb-4"
+          style={{ maxHeight: 64 }}
+        />
         <h1 className="text-4xl font-bold font-playfair text-yhwh-brown-dark">
           YHWH <span className="font-normal italic">Agency</span>
         </h1>
