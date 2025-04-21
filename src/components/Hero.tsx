@@ -40,7 +40,7 @@ const Hero = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-yhwh-white/95 to-yhwh-white/90 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-yhwh-white/95 to-yhwh-white/45 z-0"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center my-16 pt-20">
         <h2 className="animate-element opacity-0 animate-fade-in text-5xl md:text-6xl lg:text-7xl font-playfair font-bold text-yhwh-brown-dark leading-tight mb-6">
@@ -65,15 +65,15 @@ const Hero = () => {
         <div className="animate-element opacity-0 animate-fade-in delay-400 mt-24 md:mt-32 flex flex-wrap justify-center gap-12">
           <div className="text-center">
             <p className="text-yhwh-brown-dark/60 uppercase text-sm tracking-wider mb-1">EXPERIÊNCIA</p>
-            <p className="text-4xl font-playfair font-bold text-yhwh-brown-dark">+10 Anos</p>
+            <p className="text-4xl font-playfair font-bold text-yhwh-brown-dark">+2 Anos</p>
           </div>
           <div className="text-center">
             <p className="text-yhwh-brown-dark/60 uppercase text-sm tracking-wider mb-1">CLIENTES</p>
-            <p className="text-4xl font-playfair font-bold text-yhwh-brown-dark">+150</p>
+            <p className="text-4xl font-playfair font-bold text-yhwh-brown-dark">+100</p>
           </div>
           <div className="text-center">
             <p className="text-yhwh-brown-dark/60 uppercase text-sm tracking-wider mb-1">PROJETOS</p>
-            <p className="text-4xl font-playfair font-bold text-yhwh-brown-dark">+500</p>
+            <p className="text-4xl font-playfair font-bold text-yhwh-brown-dark">+300</p>
           </div>
         </div>
       </div>
