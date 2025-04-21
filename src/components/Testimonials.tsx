@@ -131,30 +131,32 @@ const Testimonials = () => {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="w-full flex-shrink-0 px-4 md:px-8 flex flex-col"
+                  className="w-full flex-shrink-0 px-4 md:px-8"
                   style={{ minHeight: 210 }}
                 >
-                  <div className="w-full mb-6">
-                    <p className="text-yhwh-brown-medium italic text-left">
+                  <div className="w-full mb-8">
+                    <p className="text-yhwh-brown-medium italic text-lg">
                       "{testimonial.testimonial}"
                     </p>
                   </div>
                   
-                  <div className="flex items-center gap-4">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-yhwh-brown-light"
-                    />
+                  <div className="flex items-center">
+                    <div className="mr-4">
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="w-16 h-16 rounded-full object-cover border-2 border-yhwh-brown-light"
+                      />
+                    </div>
                     
                     <div>
                       <h4 className="font-playfair font-bold text-yhwh-brown-dark text-lg">
                         {testimonial.name}
                       </h4>
-                      <p className="text-yhwh-brown-medium text-sm mb-2">
+                      <p className="text-yhwh-brown-medium text-sm mb-1">
                         {testimonial.position}
                       </p>
-                      <div className="flex space-x-1">
+                      <div className="flex">
                         {renderStars(testimonial.stars)}
                       </div>
                     </div>
