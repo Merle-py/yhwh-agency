@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from "react";
 
 const testimonials = [
@@ -132,10 +133,10 @@ const Testimonials = () => {
                 <div
                   key={index}
                   className="w-full flex-shrink-0 px-4 md:px-8"
-                  style={{ minHeight: 210 }}
+                  style={{ minHeight: 250 }}
                 >
                   <div className="w-full mb-8">
-                    <p className="text-yhwh-brown-medium italic text-lg">
+                    <p className="text-yhwh-brown-medium italic text-lg break-words whitespace-normal">
                       "{testimonial.testimonial}"
                     </p>
                   </div>
