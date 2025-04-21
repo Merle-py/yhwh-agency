@@ -38,7 +38,8 @@ const Hero = () => {
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-yhwh-brown-soft"
       style={{
-        backgroundImage: "linear-gradient(to right, rgba(255,255,255,0.85), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80')",
+        // Diminui ainda mais a opacidade para aumentar a suavidade sobre o fundo
+        backgroundImage: "linear-gradient(to right, rgba(255,255,255,0.7), rgba(255,255,255,0.6)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -59,7 +60,10 @@ const Hero = () => {
         <div className="animate-element opacity-0 animate-fade-in delay-300">
           <a 
             href="#contact" 
-            className={`btn-primary text-lg px-8 py-4 rounded-md shadow-lg hover:shadow-xl inline-block ${isMobile ? 'w-full max-w-xs' : ''}`}
+            className={`btn-primary text-lg px-8 py-4 rounded-md shadow-lg hover:shadow-xl inline-block
+              ${isMobile ? 'w-full' : ''}
+            `}
+            style={isMobile ? { maxWidth: '100%', width: '100%' } : {}}
           >
             Solicite um Diagnóstico Gratuito
           </a>

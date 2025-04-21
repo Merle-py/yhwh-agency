@@ -31,7 +31,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <a href="#" className="text-yhwh-brown-dark flex items-center">
           <img
-            src="/lovable-uploads/b0c3a698-b2cd-40f9-96ef-1a7785603203.png"
+            src="/lovable-uploads/1af4660d-8074-4e32-b824-dc7dcdd736df.png"
             alt="YHWH Agency"
             className="h-10 w-auto mr-2"
             style={{ maxHeight: 40 }}
