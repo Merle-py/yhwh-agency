@@ -29,12 +29,12 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-        <a href="#" className="text-yhwh-brown-dark flex items-center">
+        <a href="#" className="flex items-center text-yhwh-brown-dark"> {/* Apply dark brown color */}
           <img
             src="/lovable-uploads/b0c3a698-b2cd-40f9-96ef-1a7785603203.png"
             alt="YHWH Agency"
             className="h-10 w-auto mr-2"
-            style={{ maxHeight: 40 }}
+            style={{ maxHeight: 40, filter: 'none' }} // Disable any filter that overrides color
           />
           {/* Se quiser o texto do lado do logo, adicione abaixo:
           <span className="sr-only">YHWH Agency</span>
@@ -150,3 +150,4 @@ const Header = () => {
 };
 
 export default Header;
+
