@@ -1,8 +1,11 @@
 
 import { useEffect, useRef } from "react";
+import { Button } from "@/components/ui/button";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -35,7 +38,7 @@ const Hero = () => {
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-yhwh-brown-soft"
       style={{
-        backgroundImage: "linear-gradient(to right, rgba(255,255,255,0.95), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80')",
+        backgroundImage: "linear-gradient(to right, rgba(255,255,255,0.85), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -56,7 +59,7 @@ const Hero = () => {
         <div className="animate-element opacity-0 animate-fade-in delay-300">
           <a 
             href="#contact" 
-            className="btn-primary text-lg px-8 py-4 rounded-md shadow-lg hover:shadow-xl"
+            className={`btn-primary text-lg px-8 py-4 rounded-md shadow-lg hover:shadow-xl inline-block ${isMobile ? 'w-full max-w-xs' : ''}`}
           >
             Solicite um Diagnóstico Gratuito
           </a>
@@ -101,4 +104,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
