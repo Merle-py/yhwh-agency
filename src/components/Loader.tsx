@@ -28,7 +28,7 @@ const Loader = () => {
         />
         <div className="mt-4 h-1 w-48 bg-yhwh-brown-light/20 overflow-hidden rounded-full">
           <div
-            className="h-full bg-yhwh-brown-light origin-left"
+            className="h-full bg-yhwh-brown-dark origin-left"
             style={{
               animation: "loading 1.5s ease-in-out infinite",
             }}
@@ -56,4 +56,3 @@ const Loader = () => {
 };
 
 export default Loader;
-
