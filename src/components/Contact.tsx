@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 
 const Contact = () => {
@@ -77,7 +76,7 @@ const Contact = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="animate-element opacity-0 animate-fade-in section-title">
-            Entre em Contato
+            Entre em contato
           </h2>
           <p className="animate-element opacity-0 animate-fade-in delay-100 section-subtitle">
             Vamos transformar sua presença digital juntos. Fale conosco hoje.

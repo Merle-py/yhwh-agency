@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -38,7 +37,6 @@ const Hero = () => {
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-yhwh-brown-soft"
       style={{
-        // Diminui ainda mais a opacidade para aumentar a suavidade sobre o fundo
         backgroundImage: "linear-gradient(to right, rgba(255,255,255,0.7), rgba(255,255,255,0.6)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80')",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -48,8 +46,8 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center my-16 pt-20">
         <h2 className="animate-element opacity-0 animate-fade-in text-5xl md:text-6xl lg:text-7xl font-playfair font-bold text-yhwh-brown-dark leading-tight mb-6">
-          Transformamos <span className="text-yhwh-brown-light">Marcas</span> em<br />
-          <span className="italic">Referências</span> Digitais
+          Transformamos <span className="text-yhwh-brown-light">marcas</span> em<br />
+          <span className="italic">referências</span> digitais
         </h2>
         
         <p className="animate-element opacity-0 animate-fade-in delay-200 text-xl md:text-2xl text-yhwh-brown-medium max-w-3xl mx-auto mb-10 leading-relaxed">
@@ -65,21 +63,21 @@ const Hero = () => {
             `}
             style={isMobile ? { maxWidth: '100%', width: '100%' } : {}}
           >
-            Solicite um Diagnóstico Gratuito
+            Solicite um diagnóstico gratuito
           </a>
         </div>
         
         <div className="animate-element opacity-0 animate-fade-in delay-400 mt-24 md:mt-32 flex flex-wrap justify-center gap-12">
           <div className="text-center">
-            <p className="text-yhwh-brown-dark/60 uppercase text-sm tracking-wider mb-1">EXPERIÊNCIA</p>
+            <p className="text-yhwh-brown-dark/60 uppercase text-sm tracking-wider mb-1">Experiência</p>
             <p className="text-4xl font-playfair font-bold text-yhwh-brown-dark">+2 Anos</p>
           </div>
           <div className="text-center">
-            <p className="text-yhwh-brown-dark/60 uppercase text-sm tracking-wider mb-1">CLIENTES</p>
+            <p className="text-yhwh-brown-dark/60 uppercase text-sm tracking-wider mb-1">Clientes</p>
             <p className="text-4xl font-playfair font-bold text-yhwh-brown-dark">+100</p>
           </div>
           <div className="text-center">
-            <p className="text-yhwh-brown-dark/60 uppercase text-sm tracking-wider mb-1">PROJETOS</p>
+            <p className="text-yhwh-brown-dark/60 uppercase text-sm tracking-wider mb-1">Projetos</p>
             <p className="text-4xl font-playfair font-bold text-yhwh-brown-dark">+300</p>
           </div>
         </div>

@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 
 const About = () => {
@@ -39,7 +38,7 @@ const About = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="animate-element opacity-0 animate-fade-in section-title">
-            Sobre Nós
+            Sobre nós
           </h2>
           <p className="animate-element opacity-0 animate-fade-in delay-100 section-subtitle">
             Somos uma agência de marketing premium focada em transformar marcas através de estratégias exclusivas e inovadoras.
@@ -63,7 +62,7 @@ const About = () => {
 
           <div className="animate-element opacity-0 animate-slide-in delay-200">
             <h3 className="text-2xl md:text-3xl font-playfair font-bold text-yhwh-brown-dark mb-6">
-              Nossa Missão é Elevar sua Marca ao Próximo Nível
+              Nossa missão é elevar sua marca ao próximo nível
             </h3>
             <p className="text-yhwh-brown-medium mb-6 leading-relaxed">
               Na YHWH Agency, não criamos apenas campanhas – construímos legados digitais. Nosso time combina expertise estratégica, visão criativa e execução técnica precisa para transformar a presença de marca dos nossos clientes.
@@ -92,7 +91,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-playfair font-bold text-yhwh-brown-dark mb-2">
-                    Personalização Estratégica
+                    Personalização estratégica
                   </h4>
                   <p className="text-yhwh-brown-medium text-sm">
                     Soluções feitas sob medida para os objetivos específicos de cada marca.
@@ -119,7 +118,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-playfair font-bold text-yhwh-brown-dark mb-2">
-                    Resultados Mensuráveis
+                    Resultados mensuráveis
                   </h4>
                   <p className="text-yhwh-brown-medium text-sm">
                     Análises detalhadas e estratégias baseadas em dados para máximo retorno.

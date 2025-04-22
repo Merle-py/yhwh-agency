@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 
 const portfolioItems = [
@@ -82,7 +81,7 @@ const Portfolio = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="animate-element opacity-0 animate-fade-in section-title">
-            Nosso Portfólio
+            Nosso portfólio
           </h2>
           <p className="animate-element opacity-0 animate-fade-in delay-100 section-subtitle">
             Conheça alguns dos nossos projetos e cases de sucesso.
