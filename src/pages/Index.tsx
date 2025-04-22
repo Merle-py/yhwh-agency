@@ -39,26 +39,32 @@ const Index = () => {
     };
   }, []);
 
-  // Smooth scroll for anchor links
+  // Enhanced smooth scroll for all anchor links
   useEffect(() => {
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      const isAnchor = target.tagName === "A" && target.getAttribute("href")?.startsWith("#");
-
-      if (isAnchor) {
-        e.preventDefault();
-        const targetId = target.getAttribute("href");
-        if (targetId && targetId !== "#") {
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.getBoundingClientRect().top + window.scrollY - 100,
-              behavior: "smooth",
-            });
-          }
-        } else if (targetId === "#") {
+      const closestAnchor = target.closest('a');
+      
+      if (!closestAnchor) return;
+      
+      const href = closestAnchor.getAttribute("href");
+      if (!href || !href.startsWith("#")) return;
+      
+      e.preventDefault();
+      
+      if (href === "#") {
+        // Scroll to top
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      } else {
+        // Scroll to specific element
+        const targetElement = document.querySelector(href);
+        if (targetElement) {
+          const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY - 100;
           window.scrollTo({
-            top: 0,
+            top: offsetTop,
             behavior: "smooth",
           });
         }

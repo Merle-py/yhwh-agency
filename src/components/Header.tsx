@@ -42,7 +42,17 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-        <a href="#" className="text-yhwh-brown-dark flex items-center">
+        <a 
+          href="#" 
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          }}
+          className="text-yhwh-brown-dark flex items-center"
+        >
           <img
             src="/lovable-uploads/e39ca635-cba2-47d7-b864-8ae2416e17c8.png"
             alt="YHWH Agency"
@@ -163,4 +173,3 @@ const Header = () => {
 };
 
 export default Header;
-
