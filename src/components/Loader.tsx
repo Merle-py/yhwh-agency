@@ -21,7 +21,7 @@ const Loader = () => {
     >
       <div className="relative flex flex-col items-center">
         <img
-          src="/lovable-uploads/582bd334-7ea1-4e15-b5b1-1d3400c2a3c4.png"
+          src="/lovable-uploads/e39ca635-cba2-47d7-b864-8ae2416e17c8.png"
           alt="YHWH Agency"
           className="h-36 w-auto mb-2"
           style={{ maxHeight: 144 }}
