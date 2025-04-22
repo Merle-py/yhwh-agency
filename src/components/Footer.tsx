@@ -8,8 +8,8 @@ const Footer = () => {
               <img
                 src="/lovable-uploads/582bd334-7ea1-4e15-b5b1-1d3400c2a3c4.png"
                 alt="YHWH Agency"
-                className="h-14 w-auto"
-                style={{ maxHeight: 56 }}
+                className="h-[145px] w-auto"
+                style={{ maxHeight: 145 }}
               />
             </h2>
             <p className="text-yhwh-white/70 mb-6 leading-relaxed">

@@ -1,5 +1,4 @@
-
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -56,15 +55,11 @@ const Header = () => {
           <img
             src="/lovable-uploads/e39ca635-cba2-47d7-b864-8ae2416e17c8.png"
             alt="YHWH Agency"
-            className="h-10 w-auto mr-2"
-            style={{ maxHeight: 40 }}
+            className="h-[145px] w-auto mr-2"
+            style={{ maxHeight: 145 }}
           />
-          {/* Se quiser o texto do lado do logo, adicione abaixo:
-          <span className="sr-only">YHWH Agency</span>
-          */}
         </a>
 
-        {/* Mobile menu button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden text-yhwh-brown-dark focus:outline-none"
@@ -94,7 +89,6 @@ const Header = () => {
           </svg>
         </button>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <a href="#about" className="nav-link" onClick={(e) => handleNavClick(e, '#about')}>
             Sobre
@@ -117,7 +111,6 @@ const Header = () => {
         </nav>
       </div>
 
-      {/* Mobile Navigation */}
       <div
         className={`md:hidden absolute w-full bg-white shadow-md transition-all duration-300 ease-in-out ${
           isMobileMenuOpen ? "max-h-80 py-4" : "max-h-0 overflow-hidden"
