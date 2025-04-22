@@ -20,6 +20,19 @@ const Header = () => {
     };
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const element = document.querySelector(targetId);
+    if (element) {
+      const offsetTop = element.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -73,22 +86,22 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#about" className="nav-link">
+          <a href="#about" className="nav-link" onClick={(e) => handleNavClick(e, '#about')}>
             Sobre
           </a>
-          <a href="#services" className="nav-link">
+          <a href="#services" className="nav-link" onClick={(e) => handleNavClick(e, '#services')}>
             Serviços
           </a>
-          <a href="#portfolio" className="nav-link">
+          <a href="#portfolio" className="nav-link" onClick={(e) => handleNavClick(e, '#portfolio')}>
             Portfólio
           </a>
-          <a href="#testimonials" className="nav-link">
+          <a href="#testimonials" className="nav-link" onClick={(e) => handleNavClick(e, '#testimonials')}>
             Depoimentos
           </a>
-          <a href="#contact" className="nav-link">
+          <a href="#contact" className="nav-link" onClick={(e) => handleNavClick(e, '#contact')}>
             Contato
           </a>
-          <a href="#contact" className="btn-primary">
+          <a href="#contact" className="btn-primary" onClick={(e) => handleNavClick(e, '#contact')}>
             Diagnóstico Gratuito
           </a>
         </nav>
@@ -104,42 +117,42 @@ const Header = () => {
           <a
             href="#about"
             className="nav-link p-2"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={(e) => handleNavClick(e, '#about')}
           >
             Sobre
           </a>
           <a
             href="#services"
             className="nav-link p-2"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={(e) => handleNavClick(e, '#services')}
           >
             Serviços
           </a>
           <a
             href="#portfolio"
             className="nav-link p-2"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={(e) => handleNavClick(e, '#portfolio')}
           >
             Portfólio
           </a>
           <a
             href="#testimonials"
             className="nav-link p-2"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={(e) => handleNavClick(e, '#testimonials')}
           >
             Depoimentos
           </a>
           <a
             href="#contact"
             className="nav-link p-2"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={(e) => handleNavClick(e, '#contact')}
           >
             Contato
           </a>
           <a
             href="#contact"
             className="btn-primary text-center"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={(e) => handleNavClick(e, '#contact')}
           >
             Diagnóstico Gratuito
           </a>
