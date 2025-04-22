@@ -1,4 +1,6 @@
-import { useEffect, useRef, Link } from "react";
+
+import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const serviceItems = [
   {
