@@ -1,5 +1,4 @@
-
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, Link } from "react";
 
 const serviceItems = [
   {
@@ -170,46 +169,56 @@ const Services = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {serviceItems.map((service, index) => (
-            <div
-              key={index}
-              className={`animate-element opacity-0 animate-scale-in delay-${
-                (index % 3) * 100
-              } service-card group`}
-            >
-              <div className="mb-6 p-4 inline-block rounded-full bg-yhwh-brown-light/10 group-hover:bg-yhwh-brown-light/20 transition-colors duration-300">
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-playfair font-bold text-yhwh-brown-dark mb-3">
-                {service.title}
-              </h3>
-              <p className="text-yhwh-brown-medium text-sm leading-relaxed">
-                {service.description}
-              </p>
-              <div className="mt-5 pt-5 border-t border-yhwh-brown-light/20">
-                <a
-                  href="#contact"
-                  className="text-yhwh-brown-dark font-medium flex items-center group-hover:text-yhwh-brown-light transition-colors duration-300"
-                >
-                  Saiba mais
-                  <svg
-                    className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
+          {serviceItems.map((service, index) => {
+            const links = [
+              "/servicos/branding",
+              "/servicos/captacao",
+              "/servicos/edicao",
+              "/servicos/rebranding",
+              "/servicos/socialmedia",
+              "/servicos/trafego",
+            ];
+            return (
+              <div
+                key={index}
+                className={`animate-element opacity-0 animate-scale-in delay-${
+                  (index % 3) * 100
+                } service-card group`}
+              >
+                <div className="mb-6 p-4 inline-block rounded-full bg-yhwh-brown-light/10 group-hover:bg-yhwh-brown-light/20 transition-colors duration-300">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-playfair font-bold text-yhwh-brown-dark mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-yhwh-brown-medium text-sm leading-relaxed">
+                  {service.description}
+                </p>
+                <div className="mt-5 pt-5 border-t border-yhwh-brown-light/20">
+                  <Link
+                    to={links[index]}
+                    className="text-yhwh-brown-dark font-medium flex items-center group-hover:text-yhwh-brown-light transition-colors duration-300"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </a>
+                    Saiba mais
+                    <svg
+                      className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
+                    </svg>
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
