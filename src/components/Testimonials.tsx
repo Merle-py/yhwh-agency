@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import {
@@ -23,7 +24,7 @@ const testimonials = [
     testimonial:
       "Finalmente encontrei uma agência que entende realmente de estratégia digital. O investimento valeu cada centavo pelo retorno que obtivemos.",
     stars: 5,
-    image: "/lovable-uploads/e217a2d9-f645-4361-85c7-900f55659e63.webp",
+    image: "/lovable-uploads/582bd334-7ea1-4e15-b5b1-1d3400c2a3c4.png",
   },
   {
     name: "Ana Costa",
@@ -31,8 +32,32 @@ const testimonials = [
     testimonial:
       "A equipe da YHWH Agency é excepcional! O rebranding da minha marca superou todas as expectativas e os resultados são visíveis.",
     stars: 5,
-    image: "/lovable-uploads/e217a2d9-f645-4361-85c7-900f55659e63.webp",
+    image: "/lovable-uploads/b0c3a698-b2cd-40f9-96ef-1a7785603203.png",
   },
+  {
+    name: "Pedro Oliveira",
+    position: "Gerente de Vendas",
+    testimonial:
+      "Desde que começamos a trabalhar com a YHWH Agency, nossas vendas online aumentaram em mais de 200%. A equipe é altamente profissional e dedicada.",
+    stars: 5,
+    image: "/lovable-uploads/e39ca635-cba2-47d7-b864-8ae2416e17c8.png",
+  },
+  {
+    name: "Carla Mendes",
+    position: "Diretora Criativa",
+    testimonial:
+      "A abordagem estratégica da YHWH Agency para nossa presença nas redes sociais foi transformadora. Nossa marca ganhou uma nova vida!",
+    stars: 5,
+    image: "/lovable-uploads/1af4660d-8074-4e32-b824-dc7dcdd736df.png",
+  },
+  {
+    name: "Roberto Almeida",
+    position: "Proprietário",
+    testimonial:
+      "Excelente trabalho! A equipe da YHWH Agency foi fundamental para estabelecer nossa presença digital e aumentar nossa base de clientes.",
+    stars: 5,
+    image: "/lovable-uploads/e217a2d9-f645-4361-85c7-900f55659e63.webp",
+  }
 ];
 
 const Testimonials = () => {
@@ -90,14 +115,14 @@ const Testimonials = () => {
     <section
       id="testimonials"
       ref={testimonialsRef}
-      className="py-24 bg-yhwh-brown-soft/30"
+      className="py-24 bg-white"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="animate-element opacity-0 animate-fade-in section-title">
+          <h2 className="animate-element opacity-0 animate-fade-in section-title text-yhwh-brown-dark">
             Depoimentos
           </h2>
-          <p className="animate-element opacity-0 animate-fade-in delay-100 section-subtitle">
+          <p className="animate-element opacity-0 animate-fade-in delay-100 section-subtitle text-yhwh-brown-medium">
             O que nossos clientes dizem sobre nosso trabalho.
           </p>
         </div>
@@ -113,12 +138,12 @@ const Testimonials = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/3">
-                  <div className="bg-white rounded-xl p-8 shadow-lg h-full">
+                  <div className="bg-yhwh-brown-soft rounded-xl p-8 shadow-lg h-full">
                     <div className="flex flex-col items-center text-center h-full">
                       <div className="flex mb-4">
                         {renderStars(testimonial.stars)}
                       </div>
-                      <p className="text-lg text-gray-700 italic mb-6 flex-grow">
+                      <p className="text-lg text-yhwh-brown-dark italic mb-6 flex-grow">
                         "{testimonial.testimonial}"
                       </p>
                       <Avatar className="w-16 h-16 mb-4">
@@ -128,7 +153,7 @@ const Testimonials = () => {
                       <h4 className="font-bold text-lg text-yhwh-brown-dark">
                         {testimonial.name}
                       </h4>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-yhwh-brown-medium">
                         {testimonial.position}
                       </p>
                     </div>
