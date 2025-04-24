@@ -1,33 +1,30 @@
-
 import { useEffect, useRef, useState } from "react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const testimonials = [
   {
-    name: "Carolina Mendes",
-    position: "CEO, Lumina Designs",
+    name: "Maria Santos",
+    position: "CEO & Fundadora",
     testimonial:
-      "Trabalhar com a YHWH Agency transformou completamente nossa presença digital. A estratégia personalizada e o branding sofisticado nos posicionaram como referência no mercado. Resultados muito além do esperado.",
+      "A YHWH Agency transformou completamente nossa presença digital! A estratégia personalizada nos trouxe resultados impressionantes em apenas alguns meses.",
     stars: 5,
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150",
+    image: "/lovable-uploads/e217a2d9-f645-4361-85c7-900f55659e63.webp",
   },
   {
-    name: "Rodrigo Almeida",
-    position: "Diretor de Marketing, Ethereal",
+    name: "João Silva",
+    position: "Diretor de Marketing",
     testimonial:
-      "Impressionado com a qualidade e precisão das campanhas. A equipe da YHWH Agency compreendeu perfeitamente o DNA da nossa marca e isso se refletiu nos excelentes resultados obtidos com o tráfego pago.",
+      "Finalmente encontrei uma agência que entende realmente de estratégia digital. O investimento valeu cada centavo pelo retorno que obtivemos.",
     stars: 5,
-    image:
-      "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=150&h=150",
+    image: "/lovable-uploads/e217a2d9-f645-4361-85c7-900f55659e63.webp",
   },
   {
-    name: "Amanda Soares",
-    position: "Fundadora, Aura Estudio",
+    name: "Ana Costa",
+    position: "Empreendedora",
     testimonial:
-      "O rebranding realizado pela YHWH Agency revolucionou nossa comunicação. A atenção aos detalhes, o design sofisticado e a estratégia integrada criaram uma imagem que realmente representa nossos valores.",
+      "A equipe da YHWH Agency é excepcional! O rebranding da minha marca superou todas as expectativas e os resultados são visíveis.",
     stars: 5,
-    image:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150&h=150",
+    image: "/lovable-uploads/e217a2d9-f645-4361-85c7-900f55659e63.webp",
   },
 ];
 
@@ -80,9 +77,7 @@ const Testimonials = () => {
         <svg
           key={index}
           className={`w-5 h-5 ${
-            index < count
-              ? "text-yhwh-brown-light"
-              : "text-yhwh-brown-light/20"
+            index < count ? "text-green-500" : "text-gray-300"
           }`}
           fill="currentColor"
           viewBox="0 0 20 20"
@@ -109,19 +104,8 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="animate-element opacity-0 animate-fade-in delay-200 relative flex flex-col items-center">
-          <div className="w-16 h-16 absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8">
-            <svg
-              className="w-full h-full text-yhwh-brown-light/20"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-            </svg>
-          </div>
-
-          <div className="relative overflow-hidden w-full max-w-3xl bg-white rounded-xl shadow-lg p-8 md:p-12">
+        <div className="animate-element opacity-0 animate-fade-in delay-200 relative">
+          <div className="relative overflow-hidden">
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{
@@ -132,34 +116,26 @@ const Testimonials = () => {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="w-full flex-shrink-0 px-4 md:px-8"
-                  style={{ minHeight: 250 }}
+                  className="w-full flex-shrink-0 px-4"
                 >
-                  <div className="w-full mb-8">
-                    <p className="text-yhwh-brown-medium italic text-lg break-words whitespace-normal">
-                      "{testimonial.testimonial}"
-                    </p>
-                  </div>
-                  
-                  <div className="flex items-center">
-                    <div className="mr-4">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="w-16 h-16 rounded-full object-cover border-2 border-yhwh-brown-light"
-                      />
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-playfair font-bold text-yhwh-brown-dark text-lg">
-                        {testimonial.name}
-                      </h4>
-                      <p className="text-yhwh-brown-medium text-sm mb-1">
-                        {testimonial.position}
-                      </p>
-                      <div className="flex">
+                  <div className="max-w-2xl mx-auto bg-white rounded-xl p-8 shadow-lg">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="flex mb-4">
                         {renderStars(testimonial.stars)}
                       </div>
+                      <p className="text-lg text-gray-700 italic mb-6">
+                        "{testimonial.testimonial}"
+                      </p>
+                      <Avatar className="w-16 h-16 mb-4">
+                        <AvatarImage src={testimonial.image} alt={testimonial.name} />
+                        <AvatarFallback>{testimonial.name[0]}</AvatarFallback>
+                      </Avatar>
+                      <h4 className="font-bold text-lg text-yhwh-brown-dark">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        {testimonial.position}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -178,7 +154,7 @@ const Testimonials = () => {
                     : "bg-yhwh-brown-light/40"
                 }`}
                 aria-label={`Ver depoimento ${index + 1}`}
-              ></button>
+              />
             ))}
           </div>
         </div>
