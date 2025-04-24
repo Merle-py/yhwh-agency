@@ -9,7 +9,7 @@ const testimonials = [
     testimonial:
       "A YHWH Agency transformou completamente nossa presença digital! A estratégia personalizada nos trouxe resultados impressionantes em apenas alguns meses.",
     stars: 5,
-    image: "/lovable-uploads/e217a2d9-f645-4361-85c7-900f55659e63.webp",
+    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
   },
   {
     name: "João Silva",
@@ -17,7 +17,7 @@ const testimonials = [
     testimonial:
       "Finalmente encontrei uma agência que entende realmente de estratégia digital. O investimento valeu cada centavo pelo retorno que obtivemos.",
     stars: 5,
-    image: "/lovable-uploads/e217a2d9-f645-4361-85c7-900f55659e63.webp",
+    image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952",
   },
   {
     name: "Ana Costa",
@@ -25,8 +25,32 @@ const testimonials = [
     testimonial:
       "A equipe da YHWH Agency é excepcional! O rebranding da minha marca superou todas as expectativas e os resultados são visíveis.",
     stars: 5,
-    image: "/lovable-uploads/e217a2d9-f645-4361-85c7-900f55659e63.webp",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
   },
+  {
+    name: "Pedro Oliveira",
+    position: "Diretor Comercial",
+    testimonial:
+      "O profissionalismo e dedicação da equipe são incomparáveis. Nossa presença nas redes sociais melhorou significativamente.",
+    stars: 5,
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+  },
+  {
+    name: "Carla Mendes",
+    position: "Gerente de Marketing Digital",
+    testimonial:
+      "Desde que começamos a trabalhar com a YHWH Agency, nossas métricas de conversão aumentaram mais de 200%. Resultados reais e mensuráveis!",
+    stars: 5,
+    image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5",
+  },
+  {
+    name: "Roberto Santos",
+    position: "Proprietário de E-commerce",
+    testimonial:
+      "A estratégia de marketing digital desenvolvida pela YHWH Agency revolucionou meu negócio online. Superou todas as expectativas!",
+    stars: 5,
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7",
+  }
 ];
 
 const Testimonials = () => {
