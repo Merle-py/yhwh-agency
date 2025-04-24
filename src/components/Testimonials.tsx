@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+
+import { useEffect, useRef } from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const testimonials = [
@@ -30,15 +31,6 @@ const testimonials = [
 
 const Testimonials = () => {
   const testimonialsRef = useRef<HTMLDivElement>(null);
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -104,57 +96,32 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="animate-element opacity-0 animate-fade-in delay-200 relative">
-          <div className="relative overflow-hidden">
-            <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{
-                transform: `translateX(-${current * 100}%)`,
-                width: `${testimonials.length * 100}%`,
-              }}
-            >
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="w-full flex-shrink-0 px-4"
-                >
-                  <div className="max-w-2xl mx-auto bg-white rounded-xl p-8 shadow-lg">
-                    <div className="flex flex-col items-center text-center">
-                      <div className="flex mb-4">
-                        {renderStars(testimonial.stars)}
-                      </div>
-                      <p className="text-lg text-gray-700 italic mb-6">
-                        "{testimonial.testimonial}"
-                      </p>
-                      <Avatar className="w-16 h-16 mb-4">
-                        <AvatarImage src={testimonial.image} alt={testimonial.name} />
-                        <AvatarFallback>{testimonial.name[0]}</AvatarFallback>
-                      </Avatar>
-                      <h4 className="font-bold text-lg text-yhwh-brown-dark">
-                        {testimonial.name}
-                      </h4>
-                      <p className="text-sm text-gray-600">
-                        {testimonial.position}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="flex justify-center mt-8 space-x-2">
-            {testimonials.map((_, index) => (
-              <button
+        <div className="animate-element opacity-0 animate-fade-in delay-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div
                 key={index}
-                onClick={() => setCurrent(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  current === index
-                    ? "bg-yhwh-brown-dark w-8"
-                    : "bg-yhwh-brown-light/40"
-                }`}
-                aria-label={`Ver depoimento ${index + 1}`}
-              />
+                className="bg-white rounded-xl p-8 shadow-lg"
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div className="flex mb-4">
+                    {renderStars(testimonial.stars)}
+                  </div>
+                  <p className="text-lg text-gray-700 italic mb-6">
+                    "{testimonial.testimonial}"
+                  </p>
+                  <Avatar className="w-16 h-16 mb-4">
+                    <AvatarImage src={testimonial.image} alt={testimonial.name} />
+                    <AvatarFallback>{testimonial.name[0]}</AvatarFallback>
+                  </Avatar>
+                  <h4 className="font-bold text-lg text-yhwh-brown-dark">
+                    {testimonial.name}
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    {testimonial.position}
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -164,3 +131,4 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
