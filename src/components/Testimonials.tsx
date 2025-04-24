@@ -1,6 +1,12 @@
-
 import { useEffect, useRef } from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const testimonials = [
   {
@@ -97,33 +103,44 @@ const Testimonials = () => {
         </div>
 
         <div className="animate-element opacity-0 animate-fade-in delay-200">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-8 shadow-lg"
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="flex mb-4">
-                    {renderStars(testimonial.stars)}
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/3">
+                  <div className="bg-white rounded-xl p-8 shadow-lg h-full">
+                    <div className="flex flex-col items-center text-center h-full">
+                      <div className="flex mb-4">
+                        {renderStars(testimonial.stars)}
+                      </div>
+                      <p className="text-lg text-gray-700 italic mb-6 flex-grow">
+                        "{testimonial.testimonial}"
+                      </p>
+                      <Avatar className="w-16 h-16 mb-4">
+                        <AvatarImage src={testimonial.image} alt={testimonial.name} />
+                        <AvatarFallback>{testimonial.name[0]}</AvatarFallback>
+                      </Avatar>
+                      <h4 className="font-bold text-lg text-yhwh-brown-dark">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        {testimonial.position}
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-lg text-gray-700 italic mb-6">
-                    "{testimonial.testimonial}"
-                  </p>
-                  <Avatar className="w-16 h-16 mb-4">
-                    <AvatarImage src={testimonial.image} alt={testimonial.name} />
-                    <AvatarFallback>{testimonial.name[0]}</AvatarFallback>
-                  </Avatar>
-                  <h4 className="font-bold text-lg text-yhwh-brown-dark">
-                    {testimonial.name}
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    {testimonial.position}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="hidden md:block">
+              <CarouselPrevious className="absolute -left-12 bg-yhwh-brown-dark hover:bg-yhwh-brown-dark/90 text-white" />
+              <CarouselNext className="absolute -right-12 bg-yhwh-brown-dark hover:bg-yhwh-brown-dark/90 text-white" />
+            </div>
+          </Carousel>
         </div>
       </div>
     </section>
@@ -131,4 +148,3 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
-
